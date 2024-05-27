@@ -1,0 +1,19 @@
+﻿<Application x:Class="WPFMVVMSideBar.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPFMVVMSideBar"
+             xmlns:viewModel="clr-namespace:WPFMVVMSideBar.MVVM.ViewModel"
+             xmlns:view="clr-namespace:WPFMVVMSideBar.MVVM.View">
+    
+    <Application.Resources>
+        
+        <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+           <view:HomeView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+            <view:SettingsView/>
+        </DataTemplate>
+
+    </Application.Resources>
+</Application>

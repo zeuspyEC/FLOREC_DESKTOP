@@ -1,0 +1,21 @@
+﻿<Window x:Class="WPFMVVMSideBar.MVVM.View.LoginMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFMVVMSideBar.MVVM.View"
+        mc:Ignorable="d"
+        Title="LoginMainWindow" Height="450" Width="800"
+        Background="#454090"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="1" Content="LogIn" Command="{Binding OpenMainWiewWindow}" Height="50"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Center" Margin="0,316,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding ServerLocation}" ItemsSource="{Binding Options}"/>
+    </Grid>
+</Window>
